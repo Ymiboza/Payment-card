@@ -122,9 +122,11 @@ export const cardLogo = () => {
         "linear-gradient(90deg, #37a72e, #37a72e, #0e4595)";
     } else {
       imgCard.src = debitCard;
+      imgCard.style = "width:15%; height:5%";
       frontCard.style =
         "background:linear-gradient(45deg, blueviolet, deeppink)";
       imgBackCard.src = debitCard;
+      imgBackCard.style = "width:14%; height:5%";
       backCard.style =
         "background:linear-gradient(45deg, blueviolet, deeppink)";
     }
