@@ -1,6 +1,10 @@
 /* eslint-disable */
 import Inputmask from "inputmask";
-import { validateEmail, requiredCard, validateDate } from "./validationForm";
+import {
+  validateEmail,
+  requiredCard,
+  validateDate,
+} from "../components/validationForm";
 
 export function validation() {
   const inputs = document.querySelectorAll(".input");
@@ -26,19 +30,20 @@ export function validation() {
 
   cardNumberInput.addEventListener("input", () => {
     cardNumberBox.innerText = cardNumberInput.value;
-    if (cardNumberBox.innerText === '') cardNumberBox.innerText = '#### #### #### #### ##'
+    if (cardNumberBox.innerText === "")
+      cardNumberBox.innerText = "#### #### #### #### ##";
   });
   cardHolderInput.addEventListener("input", () => {
     cardHolderEmail.innerText = cardHolderInput.value;
-    if (cardHolderEmail.innerText === '') cardHolderEmail.innerText = 'EMAIL'
+    if (cardHolderEmail.innerText === "") cardHolderEmail.innerText = "EMAIL";
   });
   monthInput.addEventListener("input", () => {
     expMonth.innerText = monthInput.value;
-    if (expMonth.innerText === '') expMonth.innerText = 'MM/YY'
+    if (expMonth.innerText === "") expMonth.innerText = "MM/YY";
   });
   cvvInput.addEventListener("input", () => {
     cvvBox.innerText = cvvInput.value;
-    if (cvvBox.innerText === '') cvvBox.innerText = '***'
+    if (cvvBox.innerText === "") cvvBox.innerText = "***";
   });
 
   inputs.forEach((input) => {
@@ -52,7 +57,7 @@ export function validation() {
         btn.disabled = true;
         btn.classList.remove("submit-btn");
         btn.classList.add("disabled");
-        return
+        return;
       }
       if (
         cardNumberInput.value === "" ||
@@ -63,7 +68,7 @@ export function validation() {
         btn.disabled = true;
         btn.classList.remove("submit-btn");
         btn.classList.add("disabled");
-        return
+        return;
       }
       if (
         cardNumberInput.value !== "" &&
@@ -74,9 +79,8 @@ export function validation() {
         btn.disabled = false;
         btn.classList.add("submit-btn");
         btn.classList.remove("disabled");
-        return
+        return;
       }
-
     });
     function removeError() {
       this.classList.remove("is-invalid");

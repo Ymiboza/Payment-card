@@ -1,5 +1,6 @@
-import { cardLogo } from "./cardLogo";
-import { validation, inputMask } from "./validation";
+import { cardLogo } from "./components/cardLogo";
+import { validation, inputMask } from "./utils/validation";
+import "./styles/style.css";
 
 const container = document.createElement("div");
 container.className = "container";
@@ -14,12 +15,12 @@ const imageFront = document.createElement("div");
 imageFront.className = "image";
 
 const chipImg = document.createElement("img");
-chipImg.src = "image/chip.png";
+chipImg.src = "/image/chip.png";
 chipImg.alt = "";
 
 const defaultImg = document.createElement("img");
 defaultImg.className = "defaultImg";
-defaultImg.src = "image/debit-card-icon.svg";
+defaultImg.src = "/image/debit-card-icon.svg";
 defaultImg.alt = "";
 
 imageFront.appendChild(chipImg);
@@ -88,7 +89,7 @@ cvvBox.textContent = "***";
 
 const defaultImgBack = document.createElement("img");
 defaultImgBack.className = "defaultImgBack";
-defaultImgBack.src = "image/debit-card-icon.svg";
+defaultImgBack.src = "/image/debit-card-icon.svg";
 defaultImgBack.alt = "";
 
 box3.appendChild(span3);
@@ -124,7 +125,7 @@ const tooltipText = document.createElement("p");
 const tooltipImg = document.createElement("img");
 tooltipContainer.classList.add("tooltip-container");
 tooltipIcon.classList.add("tooltip-icon");
-tooltipIcon.src = "./image/info-icon.svg";
+tooltipIcon.src = "/image/info-icon.svg";
 tooltip.classList.add("tooltip");
 tooltipText.innerHTML = `
 <ul>Номера карт начинаются:</ul>

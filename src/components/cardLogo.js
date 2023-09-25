@@ -1,14 +1,14 @@
 import Inputmask from "inputmask";
-import americanExpress from "./image/american-express-icon.svg";
-import dinersClub from "./image/diners-club-icon.svg";
-import JcbInternational from "./image/JCB_logo.svg";
-import maestro from "./image/maestro-icon.svg";
-import masterCard from "./image/master-card-icon.svg";
-import unionPay from "./image/UnionPay_logo.svg";
-import visa from "./image/visa-icon.svg";
-import discover from "./image/discover-icon.svg";
-import mir from "./image/mir-icon.svg";
-import debitCard from "./image/debit-card-icon.svg";
+import americanExpress from "../assets/image/american-express-icon.svg";
+import dinersClub from "../assets/image/diners-club-icon.svg";
+import JcbInternational from "../assets/image/JCB_logo.svg";
+import maestro from "../assets/image/maestro-icon.svg";
+import masterCard from "../assets/image/master-card-icon.svg";
+import unionPay from "../assets/image/UnionPay_logo.svg";
+import visa from "../assets/image/visa-icon.svg";
+import discover from "../assets/image/discover-icon.svg";
+import mir from "../assets/image/mir-icon.svg";
+import debitCard from "../assets/image/debit-card-icon.svg";
 
 export const cardLogo = () => {
   const numberCardInput = document.querySelector(".card-number-input");

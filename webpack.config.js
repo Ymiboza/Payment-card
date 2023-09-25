@@ -1,12 +1,12 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: './src/main.js', // Путь к вашему JavaScript-файлу
+  entry: "./src/main.js", // Путь к вашему JavaScript-файлу
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "main[contenthash].js",
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
     rules: [
@@ -14,38 +14,40 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ["@babel/preset-env"],
           },
         },
       },
       {
         test: /\.html$/,
-        use: 'html-loader',
+        use: "html-loader",
       },
       {
         test: /\.svg$/,
         use: {
-          loader: 'file-loader',
+          loader: "file-loader",
           options: {
-            name: '[name].[ext]',
-            outputPath: './src/image/', // Каталог, куда будут скопированы файлы SVG
+            name: "[name].[ext]",
+            outputPath: "src/assets/image/", // Каталог, куда будут скопированы файлы SVG
           },
         },
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // Путь к вашему файлу HTML
+      //? Путь к вашему файлу HTML
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        { from: 'src/image', to: 'image' },
-      ],
+      patterns: [{ from: "src/assets/image", to: "image" }],
     }),
   ],
-  devtool: 'source-map',
-  mode: 'development', // Устанавливаем режим разработки
+  devtool: "source-map",
+  mode: "development", // Устанавливаем режим разработки
 };
