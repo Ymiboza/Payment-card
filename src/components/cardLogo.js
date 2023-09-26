@@ -28,7 +28,7 @@ export const cardLogo = () => {
       numberCardInput.value.startsWith(38)
     ) {
       imgCard.src = dinersClub;
-      imgCard.style = "width:20%; height:5%";
+      imgCard.style = "width:55px; height:35px; object-fit:cover";
       frontCard.style.background = "linear-gradient(90deg, #808080, #ffffff)";
       imgBackCard.src = dinersClub;
       imgBackCard.style = "width:17%; height:5%";
@@ -41,7 +41,7 @@ export const cardLogo = () => {
       numberCardInput.value.startsWith(55)
     ) {
       imgCard.src = masterCard;
-      imgCard.style = "width:20%; height:5%";
+      imgCard.style = "width:55px; height:35px; object-fit:contain";
       frontCard.style.background =
         "linear-gradient(45deg, #ff6300, #fbb100, #fbb100, #ff6300)";
       imgBackCard.src = masterCard;
@@ -53,7 +53,7 @@ export const cardLogo = () => {
       numberCardInput.value.startsWith(35)
     ) {
       imgCard.src = JcbInternational;
-      imgCard.style = "width:20%; height:5%";
+      imgCard.style = "width:55px; height:35px; object-fit:cover";
       frontCard.style.background = "linear-gradient(45deg, #0077bb,  #002f65)";
       imgBackCard.src = JcbInternational;
       imgBackCard.style = "width:17%; height:5%";
@@ -63,7 +63,7 @@ export const cardLogo = () => {
       numberCardInput.value.startsWith(37)
     ) {
       imgCard.src = americanExpress;
-      imgCard.style = "width:20%; height:5%";
+      imgCard.style = "width:55px; height:35px; object-fit:cover";
       frontCard.style.background =
         "linear-gradient(45deg, #0078d4, #003087, #0078d4)";
       imgBackCard.src = americanExpress;
@@ -77,7 +77,7 @@ export const cardLogo = () => {
       numberCardInput.value.startsWith(58)
     ) {
       imgCard.src = maestro;
-      imgCard.style = "width:20%; height:5%";
+      imgCard.style = "width:55px; height:35px; object-fit:contain";
       frontCard.style.background =
         "linear-gradient(90deg, #eb001b,#7673c0, #00A1DF)";
       imgBackCard.src = maestro;
@@ -86,7 +86,7 @@ export const cardLogo = () => {
         "linear-gradient(90deg, #eb001b,#7673c0, #00A1DF)";
     } else if (numberCardInput.value.startsWith(4)) {
       imgCard.src = visa;
-      imgCard.style = "width:20%; height:5%";
+      imgCard.style = "width:55px; height:35px; object-fit:cover";
       frontCard.style.background =
         "linear-gradient(-40deg,  #0e4595,#0078d4, #f2ae14)";
       imgBackCard.src = visa;
@@ -95,7 +95,7 @@ export const cardLogo = () => {
         "linear-gradient(-40deg, #f2ae14,#0078d4, #0e4595 )";
     } else if (numberCardInput.value.startsWith(62)) {
       imgCard.src = unionPay;
-      imgCard.style = "width:20%; height:5%";
+      imgCard.style = "width:55px; height:35px; object-fit:cover";
       frontCard.style.background =
         "linear-gradient(90deg, #e21836, #00447c, #007b84)";
       imgBackCard.src = unionPay;
@@ -104,7 +104,7 @@ export const cardLogo = () => {
         "linear-gradient(90deg, #e21836, #00447c, #007b84)";
     } else if (numberCardInput.value.startsWith(60)) {
       imgCard.src = discover;
-      imgCard.style = "width:20%; height:5%";
+      imgCard.style = "width:55px; height:35px; object-fit:cover";
       frontCard.style.background =
         "linear-gradient(150deg, #4d4d4d, #4d4d4d, #f47216)";
       imgBackCard.src = discover;
@@ -113,7 +113,7 @@ export const cardLogo = () => {
         "linear-gradient(150deg, #4d4d4d, #4d4d4d, #f47216)";
     } else if (numberCardInput.value.startsWith(2)) {
       imgCard.src = mir;
-      imgCard.style = "width:20%; height:5%";
+      imgCard.style = "width:55px; height:35px; object-fit:cover";
       frontCard.style.background =
         "linear-gradient(90deg, #37a72e, #37a72e, #0e4595)";
       imgBackCard.src = mir;

@@ -285,3 +285,20 @@
     display: none;
   }
 }
+
+@media (max-width: 355px) {
+
+  .container form .inputBox {
+    margin-top: 20px;
+    height: 80px;
+    font-size: 13px;
+  }
+
+  .container .card-container .front .card-number-box {
+    font-size: 16px;
+  }
+
+  .tooltip {
+    left: 120%;
+  }
+}
