@@ -23,8 +23,8 @@ defaultImg.className = "defaultImg";
 defaultImg.src = "/image/debit-card-icon.svg";
 defaultImg.alt = "";
 
-imageFront.appendChild(chipImg);
-imageFront.appendChild(defaultImg);
+imageFront.append(chipImg);
+imageFront.append(defaultImg);
 
 const cardNumberBox = document.createElement("div");
 cardNumberBox.className = "card-number-box";
@@ -43,8 +43,8 @@ const cardHolderName = document.createElement("div");
 cardHolderName.className = "card-holder-email";
 cardHolderName.textContent = "Email";
 
-box1.appendChild(span1);
-box1.appendChild(cardHolderName);
+box1.append(span1);
+box1.append(cardHolderName);
 
 const box2 = document.createElement("div");
 box2.className = "box";
@@ -59,17 +59,17 @@ const expMonth = document.createElement("span");
 expMonth.className = "exp-month";
 expMonth.textContent = "mm/yy";
 
-expiration.appendChild(expMonth);
+expiration.append(expMonth);
 
-box2.appendChild(span2);
-box2.appendChild(expiration);
+box2.append(span2);
+box2.append(expiration);
 
-flexbox.appendChild(box1);
-flexbox.appendChild(box2);
+flexbox.append(box1);
+flexbox.append(box2);
 
-front.appendChild(imageFront);
-front.appendChild(cardNumberBox);
-front.appendChild(flexbox);
+front.append(imageFront);
+front.append(cardNumberBox);
+front.append(flexbox);
 
 const back = document.createElement("div");
 back.className = "back";
@@ -92,15 +92,15 @@ defaultImgBack.className = "defaultImgBack";
 defaultImgBack.src = "/image/debit-card-icon.svg";
 defaultImgBack.alt = "";
 
-box3.appendChild(span3);
-box3.appendChild(cvvBox);
-box3.appendChild(defaultImgBack);
+box3.append(span3);
+box3.append(cvvBox);
+box3.append(defaultImgBack);
 
-back.appendChild(stripe);
-back.appendChild(box3);
+back.append(stripe);
+back.append(box3);
 
-cardContainer.appendChild(front);
-cardContainer.appendChild(back);
+cardContainer.append(front);
+cardContainer.append(back);
 
 const form = document.createElement("form");
 form.action = "";
@@ -150,9 +150,9 @@ tooltipContainer.addEventListener("mouseleave", () => {
 tooltip.append(tooltipText, tooltipImg);
 tooltipContainer.append(tooltipIcon, tooltip);
 spanContainer.append(span4, tooltipContainer);
-inputBox1.appendChild(spanContainer);
-inputBox1.appendChild(cardNumberInput);
-inputBox1.appendChild(cardNumberErrorBlock);
+inputBox1.append(spanContainer);
+inputBox1.append(cardNumberInput);
+inputBox1.append(cardNumberErrorBlock);
 
 const inputBox2 = document.createElement("div");
 inputBox2.className = "inputBox";
@@ -167,9 +167,9 @@ cardHolderInput.placeholder = "unknown@gmail.com";
 const cardHolderErrorBlock = document.createElement("span");
 cardHolderErrorBlock.className = "error-block card-holder-error-block";
 
-inputBox2.appendChild(span5);
-inputBox2.appendChild(cardHolderInput);
-inputBox2.appendChild(cardHolderErrorBlock);
+inputBox2.append(span5);
+inputBox2.append(cardHolderInput);
+inputBox2.append(cardHolderErrorBlock);
 
 const flexbox2 = document.createElement("div");
 flexbox2.className = "flexbox";
@@ -186,9 +186,9 @@ monthInput.placeholder = "MM/YY";
 const monthErrorBlock = document.createElement("span");
 monthErrorBlock.className = "error-block card-month-error-block";
 
-inputBox3.appendChild(span6);
-inputBox3.appendChild(monthInput);
-inputBox3.appendChild(monthErrorBlock);
+inputBox3.append(span6);
+inputBox3.append(monthInput);
+inputBox3.append(monthErrorBlock);
 
 const inputBox5 = document.createElement("div");
 inputBox5.className = "inputBox";
@@ -204,12 +204,12 @@ cvvInput.placeholder = "***";
 const cvvErrorBlock = document.createElement("span");
 cvvErrorBlock.className = "error-block card-cvv-error-block";
 
-inputBox5.appendChild(span8);
-inputBox5.appendChild(cvvInput);
-inputBox5.appendChild(cvvErrorBlock);
+inputBox5.append(span8);
+inputBox5.append(cvvInput);
+inputBox5.append(cvvErrorBlock);
 
-flexbox2.appendChild(inputBox3);
-flexbox2.appendChild(inputBox5);
+flexbox2.append(inputBox3);
+flexbox2.append(inputBox5);
 
 const submitBtn = document.createElement("button");
 submitBtn.className = "submit-btn btn";
@@ -218,15 +218,15 @@ submitBtn.disabled = true;
 submitBtn.classList.remove("submit-btn");
 submitBtn.classList.add("disabled");
 
-form.appendChild(inputBox1);
-form.appendChild(inputBox2);
-form.appendChild(flexbox2);
-form.appendChild(submitBtn);
+form.append(inputBox1);
+form.append(inputBox2);
+form.append(flexbox2);
+form.append(submitBtn);
 
-container.appendChild(cardContainer);
-container.appendChild(form);
+container.append(cardContainer);
+container.append(form);
 
-document.body.appendChild(container);
+document.body.append(container);
 
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();

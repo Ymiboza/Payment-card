@@ -22,10 +22,19 @@ export const cardLogo = () => {
   numberCardMask.mask(numberCardInput);
 
   numberCardInput.addEventListener("input", () => {
+    const dinersClubStartNumbers = [30, 36, 38];
+    const masterCardStartNumbers = [51, 52, 53, 54, 55];
+    const JcbInternationalStartNumbers = [31, 35];
+    const americanExpressStartNumbers = [34, 37];
+    const maestroStartNumbers = [50, 56, 57, 58];
+    const visaStartNumbers = [4];
+    const unionPayStartNumbers = [62];
+    const discoverStartNumbers = [60];
+    const mirStartNumbers = [2];
+    const inputValue = numberCardInput.value;
+
     if (
-      numberCardInput.value.startsWith(30) ||
-      numberCardInput.value.startsWith(36) ||
-      numberCardInput.value.startsWith(38)
+      dinersClubStartNumbers.some((prefix) => inputValue.startsWith(prefix))
     ) {
       imgCard.src = dinersClub;
       imgCard.style = "width:55px; height:35px; object-fit:cover";
@@ -34,11 +43,7 @@ export const cardLogo = () => {
       imgBackCard.style = "width:17%; height:5%";
       backCard.style.background = "linear-gradient(90deg, #808080, #ffffff)";
     } else if (
-      numberCardInput.value.startsWith(51) ||
-      numberCardInput.value.startsWith(52) ||
-      numberCardInput.value.startsWith(53) ||
-      numberCardInput.value.startsWith(54) ||
-      numberCardInput.value.startsWith(55)
+      masterCardStartNumbers.some((prefix) => inputValue.startsWith(prefix))
     ) {
       imgCard.src = masterCard;
       imgCard.style = "width:55px; height:35px; object-fit:contain";
@@ -49,8 +54,9 @@ export const cardLogo = () => {
       backCard.style.background =
         "linear-gradient(45deg, #ff6300, #fbb100, #fbb100, #ff6300)";
     } else if (
-      numberCardInput.value.startsWith(31) ||
-      numberCardInput.value.startsWith(35)
+      JcbInternationalStartNumbers.some((prefix) =>
+        inputValue.startsWith(prefix)
+      )
     ) {
       imgCard.src = JcbInternational;
       imgCard.style = "width:55px; height:35px; object-fit:cover";
@@ -59,8 +65,9 @@ export const cardLogo = () => {
       imgBackCard.style = "width:17%; height:5%";
       backCard.style.background = "linear-gradient(45deg, #0077bb,  #002f65)";
     } else if (
-      numberCardInput.value.startsWith(34) ||
-      numberCardInput.value.startsWith(37)
+      americanExpressStartNumbers.some((prefix) =>
+        inputValue.startsWith(prefix)
+      )
     ) {
       imgCard.src = americanExpress;
       imgCard.style = "width:55px; height:35px; object-fit:cover";
@@ -71,10 +78,7 @@ export const cardLogo = () => {
       backCard.style.background =
         "linear-gradient(45deg, #0078d4, #003087, #0078d4)";
     } else if (
-      numberCardInput.value.startsWith(50) ||
-      numberCardInput.value.startsWith(56) ||
-      numberCardInput.value.startsWith(57) ||
-      numberCardInput.value.startsWith(58)
+      maestroStartNumbers.some((prefix) => inputValue.startsWith(prefix))
     ) {
       imgCard.src = maestro;
       imgCard.style = "width:55px; height:35px; object-fit:contain";
@@ -84,7 +88,9 @@ export const cardLogo = () => {
       imgBackCard.style = "width:17%; height:5%";
       backCard.style.background =
         "linear-gradient(90deg, #eb001b,#7673c0, #00A1DF)";
-    } else if (numberCardInput.value.startsWith(4)) {
+    } else if (
+      visaStartNumbers.some((prefix) => inputValue.startsWith(prefix))
+    ) {
       imgCard.src = visa;
       imgCard.style = "width:55px; height:35px; object-fit:cover";
       frontCard.style.background =
@@ -93,7 +99,9 @@ export const cardLogo = () => {
       imgBackCard.style = "width:17%; height:5%";
       backCard.style.background =
         "linear-gradient(-40deg, #f2ae14,#0078d4, #0e4595 )";
-    } else if (numberCardInput.value.startsWith(62)) {
+    } else if (
+      unionPayStartNumbers.some((prefix) => inputValue.startsWith(prefix))
+    ) {
       imgCard.src = unionPay;
       imgCard.style = "width:55px; height:35px; object-fit:cover";
       frontCard.style.background =
@@ -102,7 +110,9 @@ export const cardLogo = () => {
       imgBackCard.style = "width:17%; height:5%";
       backCard.style.background =
         "linear-gradient(90deg, #e21836, #00447c, #007b84)";
-    } else if (numberCardInput.value.startsWith(60)) {
+    } else if (
+      discoverStartNumbers.some((prefix) => inputValue.startsWith(prefix))
+    ) {
       imgCard.src = discover;
       imgCard.style = "width:55px; height:35px; object-fit:cover";
       frontCard.style.background =
@@ -111,7 +121,9 @@ export const cardLogo = () => {
       imgBackCard.style = "width:17%; height:5%";
       backCard.style.background =
         "linear-gradient(150deg, #4d4d4d, #4d4d4d, #f47216)";
-    } else if (numberCardInput.value.startsWith(2)) {
+    } else if (
+      mirStartNumbers.some((prefix) => inputValue.startsWith(prefix))
+    ) {
       imgCard.src = mir;
       imgCard.style = "width:55px; height:35px; object-fit:cover";
       frontCard.style.background =
