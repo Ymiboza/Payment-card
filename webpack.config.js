@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  mode: "production",
   entry: "./src/main.js", // Путь к вашему JavaScript-файлу
   output: {
     filename: "main[contenthash].js",
