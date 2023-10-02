@@ -215,8 +215,6 @@ const submitBtn = document.createElement("button");
 submitBtn.className = "submit-btn btn";
 submitBtn.textContent = "Submit";
 submitBtn.disabled = true;
-submitBtn.classList.remove("submit-btn");
-submitBtn.classList.add("disabled");
 
 form.append(inputBox1);
 form.append(inputBox2);

@@ -49,37 +49,18 @@ export function validation() {
   inputs.forEach((input) => {
     input.addEventListener("input", () => {
       if (
+        cardNumberInput.value.replace(/[_/\s]/g, "").trim().length < 16 ||
+        cardHolderInput.value === "" ||
+        monthInput.value.replace(/[_/\s]/g, "").trim().length < 4 ||
+        cvvInput.value.replace(/[_/\s]/g, "").trim().length < 3 ||
         cardNumberInput.classList.contains("is-invalid") ||
         cardHolderInput.classList.contains("is-invalid") ||
         monthInput.classList.contains("is-invalid") ||
         cvvInput.classList.contains("is-invalid")
       ) {
         btn.disabled = true;
-        btn.classList.remove("submit-btn");
-        btn.classList.add("disabled");
-        return;
-      }
-      if (
-        cardNumberInput.value === "" ||
-        cardHolderInput.value === "" ||
-        monthInput.value === "" ||
-        cvvInput.value === ""
-      ) {
-        btn.disabled = true;
-        btn.classList.remove("submit-btn");
-        btn.classList.add("disabled");
-        return;
-      }
-      if (
-        cardNumberInput.value !== "" &&
-        cardHolderInput.value !== "" &&
-        monthInput.value !== "" &&
-        cvvInput.value !== ""
-      ) {
+      } else {
         btn.disabled = false;
-        btn.classList.add("submit-btn");
-        btn.classList.remove("disabled");
-        return;
       }
     });
     function removeError() {
