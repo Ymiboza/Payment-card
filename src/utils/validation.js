@@ -47,7 +47,7 @@ export function validation() {
   });
 
   inputs.forEach((input) => {
-    input.addEventListener("input", () => {
+    input.addEventListener("blur", () => {
       if (
         cardNumberInput.value.replace(/[_/\s]/g, "").trim().length < 16 ||
         cardHolderInput.value === "" ||
@@ -64,8 +64,6 @@ export function validation() {
       }
     });
     function removeError() {
-      this.classList.remove("is-invalid");
-
       if (this.classList.contains("cvv-input")) {
         cardCVVErrorBlock.textContent = "";
       }
